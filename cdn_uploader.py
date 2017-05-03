@@ -16,10 +16,9 @@ import json
 
 import base64
 
-AWS_ACCESS_KEY = 'AKIAJJJ64Q4YYWWLHWCQ'
-AWS_ACCESS_SECRET_KEY= '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'
-AWS_BUCKET_NAME = 'cdn981094781'
-
+import { AWS_ACCESS_KEY } from './credentials'
+import { AWS_ACCESS_SECRET_KEY } from './credentials'
+import { AWS_BUCKET_NAME } from './credentials'
 
 
 iam = IAMConnection(aws_access_key_id = AWS_ACCESS_KEY,
@@ -27,12 +26,6 @@ iam = IAMConnection(aws_access_key_id = AWS_ACCESS_KEY,
 arn = iam.get_user().user.arn
 
 account_id = arn[arn.find('::')+2:arn.rfind(':')]
-
-
-
-
-
-
 
 
 
@@ -165,3 +158,4 @@ def load_file():
 	# 	print 'The upload failed...'
 
 	# return resp
+
