@@ -16,7 +16,7 @@ class DragDropImage extends React.Component {
 	    	<section>
 		        <div className="dropzone">
 		          <Dropzone onDrop={this.onDrop.bind(this)}>
-		            <p>Try dropping some files here, or click to select files to upload.</p>
+		            <p>Drop images here</p>
 		          </Dropzone>
 		        </div>
 
